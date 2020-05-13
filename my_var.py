@@ -50,7 +50,7 @@ today = date.today()
 event_date = event_date_list[1]
 event_name = name_list[1]
 print(days_till_deadline(today, event_date, event_name))
-for i in range(len(event_name)):
+for i in range(len(event_date_list)):
     print(days_till_deadline(today, event_date_list[i], name_list[i]))
 root = Tk()
 canvas = Canvas(root, width=600, height=600, bg='yellow')
