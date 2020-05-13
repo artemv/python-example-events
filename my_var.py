@@ -8,10 +8,11 @@ def get_events(filename):
         for line in file:
             line = line.rstrip('\n')
             text = line.split(',')
-            date = datetime.strptime(text[1], "%d/%m/%Y").date()
-            name = text[0]
-            date_list.append(date)
-            name_list.append(name)
+            if len(text) > 1:
+                date = datetime.strptime(text[1], "%d/%m/%Y").date()
+                name = text[0]
+                date_list.append(date)
+                name_list.append(name)
         return name_list, date_list
 def which_weekday(z):
     name_of_day = ''
